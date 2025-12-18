@@ -47,6 +47,7 @@ int main()
                     auto news=E[i];
                     if((news.u==n&&news.v==tb)||(news.v==n&&news.v==tb)){
                         toAdd=news.w;
+                        E.erase(E.begin()+i);
                         break;
                     }
 
@@ -70,6 +71,7 @@ int main()
                     auto news=E[i];
                     if((news.u==n&&news.v==ta)||(news.v==n&&news.v==ta)){
                         toAdd=news.w;
+                        E.erase(E.begin()+i);
                         break;
                     }
 
