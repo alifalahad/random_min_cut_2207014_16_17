@@ -41,13 +41,14 @@ int main()
                 //a=tmp.u;
                 int tb=tmp.v;
                 int wt=tmp.w;
+                E.erase(E.begin()+i);
                 //find
                 int toAdd=0;
-                for(int i=0;i<E.size();i++){
-                    auto news=E[i];
+                for(int j=0;j<E.size();j++){
+                    auto news=E[j];
                     if((news.u==n&&news.v==tb)||(news.v==n&&news.v==tb)){
                         toAdd=news.w;
-                        E.erase(E.begin()+i);
+                        E.erase(E.begin()+j);
                         break;
                     }
 
@@ -65,13 +66,14 @@ int main()
                 if(tmp.u==b)swap(tmp.u,tmp.v);
                 int ta=tmp.u;
                 int wt=tmp.w;
+                 E.erase(E.begin()+i);
                  //find
                 int toAdd=0;
-                for(int i=0;i<E.size();i++){
-                    auto news=E[i];
+                for(int j=0;j<E.size();j++){
+                    auto news=E[j];
                     if((news.u==n&&news.v==ta)||(news.v==n&&news.v==ta)){
                         toAdd=news.w;
-                        E.erase(E.begin()+i);
+                        E.erase(E.begin()+j);
                         break;
                     }
 
